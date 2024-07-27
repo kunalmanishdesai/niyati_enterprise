@@ -5,30 +5,25 @@ import { ThemeProvider } from '@mui/material/styles';
 import { appTheme } from './theme/theme';
 import Navbar from './components/navbar';
 import './App.css';
+import Carousel from 'components/carousel';
+import { RouterProvider } from 'react-router';
+import { createBrowserRouter } from 'react-router-dom';
+import HomePage from 'pages/HomePage';
 
 function App() {
 
-  return (
-    // <div className="App">
-    //   <header className="App-header">
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <HomePage/>
+    }
+  ])
 
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+  return (
 
     <ThemeProvider theme={appTheme}>
       <Navbar/>
+      <RouterProvider  router={router}/>
     </ThemeProvider> 
   );
 }
