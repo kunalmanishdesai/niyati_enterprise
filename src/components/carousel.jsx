@@ -41,7 +41,7 @@ const Carousel = () => {
         }, 3000); // Change image every 3 seconds
 
         return () => clearInterval(interval); // Cleanup the interval on component unmount
-    }, []);
+    },);
 
     return (
         <Box sx={{ maxWidth:'90%', flexGrow: 1, position: 'relative',mx:'auto', mt:2 }}>
