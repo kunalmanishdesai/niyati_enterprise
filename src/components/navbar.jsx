@@ -36,7 +36,7 @@ const Navbar = () => {
                 <Toolbar disableGutters>
                     <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
                     <Typography
-                        variant="h7"
+                    variant="h6"
                         noWrap
                         component="a"
                         href="#app-bar-with-responsive-menu"
