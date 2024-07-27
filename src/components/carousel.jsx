@@ -86,7 +86,7 @@ const Carousel = () => {
                         right: 0,
                         top: '50%',
                         transform: 'translateY(-50%)',
-                        color: 'theme.',
+                        color: theme.palette.secondary.main,
                     }}
                     onClick={handleNext}
                     disabled={activeStep === maxSteps - 1}
