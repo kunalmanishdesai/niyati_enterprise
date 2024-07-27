@@ -5,7 +5,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import { appTheme } from './theme/theme';
 import Navbar from './components/navbar';
 import './App.css';
-import Carousel from 'components/carousel';
 import { RouterProvider } from 'react-router';
 import { createBrowserRouter } from 'react-router-dom';
 import HomePage from 'pages/HomePage';
