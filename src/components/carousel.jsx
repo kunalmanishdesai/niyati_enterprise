@@ -44,7 +44,7 @@ const Carousel = () => {
     },);
 
     return (
-        <Box sx={{ maxWidth:'90%', flexGrow: 1, position: 'relative',mx:'auto', mt:2 }}>
+        <Box sx={{ maxWidth:'100%', flexGrow: 1, position: 'relative',mx:'auto', mt:2 }}>
             <Box
                 sx={{
                     height: 400,
