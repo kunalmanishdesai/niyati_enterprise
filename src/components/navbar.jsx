@@ -52,105 +52,67 @@ const Navbar = () => {
                         Niyati Enterprise
                     </Typography>
 
-                    {/* <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                        <IconButton
-                            size="large"
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="inherit"
-                        >
-                        <MenuIcon />
-                        </IconButton>
-
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
+                    <IconButton
+                        aria-label="account of current user"
+                        aria-controls="menu-appbar"
+                        aria-haspopup="true"
+                        onClick={handleOpenNavMenu}
+                        color="inherit"
+                        sx={{ 
+                            padding: 0, // Remove default padding
+                            fontSize: '1.5rem', // Adjust icon size
+                            mr: 1,
+                        }}
+                        
+                    >
+                        <AdbIcon sx={{ 
+                            display: { xs: 'flex', md: 'none' }, 
+                            fontSize: '1.5rem', // Adjust icon size
+                            mr: 1 
+                        }} />
+                        <Typography
+                            variant="h6" // Use a smaller variant for text
+                            noWrap
+                            component="a"
+                            href="#app-bar-with-responsive-menu"
                             sx={{
-                                display: { xs: 'block', md: 'none' },
+                                display: { xs: 'flex', md: 'none' },
+                                flexGrow: 1,
+                                fontFamily: 'futura',
+                                fontWeight: 600,
+                                color: 'inherit',
+                                textDecoration: 'none',
+                                fontSize: '1rem', // Adjust text size
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box> */}
+                            Niyati Enterprise
+                        </Typography>
+                    </IconButton>
 
-                        <IconButton
-                            aria-label="account of current user"
-                            aria-controls="menu-appbar"
-                            aria-haspopup="true"
-                            onClick={handleOpenNavMenu}
-                            color="inherit"
-                            sx={{ 
-                                padding: 0, // Remove default padding
-                                fontSize: '1.5rem', // Adjust icon size
-                                mr: 1,
-                            }}
-                            
-                        >
-                            <AdbIcon sx={{ 
-                                display: { xs: 'flex', md: 'none' }, 
-                                fontSize: '1.5rem', // Adjust icon size
-                                mr: 1 
-                            }} />
-                            <Typography
-                                variant="h6" // Use a smaller variant for text
-                                noWrap
-                                component="a"
-                                href="#app-bar-with-responsive-menu"
-                                sx={{
-                                    display: { xs: 'flex', md: 'none' },
-                                    flexGrow: 1,
-                                    fontFamily: 'futura',
-                                    fontWeight: 600,
-                                    color: 'inherit',
-                                    textDecoration: 'none',
-                                    fontSize: '1rem', // Adjust text size
-                                }}
-                            >
-                                Niyati Enterprise
-                            </Typography>
-                        </IconButton>
-
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: 'block', md: 'none' },
-                            }}
-                        >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
+                    <Menu
+                        id="menu-appbar"
+                        anchorEl={anchorElNav}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'left',
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'left',
+                        }}
+                        open={Boolean(anchorElNav)}
+                        onClose={handleCloseNavMenu}
+                        sx={{
+                            display: { xs: 'block', md: 'none' },
+                        }}
+                    >
+                        {pages.map((page) => (
+                            <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                <Typography textAlign="center">{page}</Typography>
+                            </MenuItem>
+                        ))}
+                    </Menu>
 
                     {/* Search Bar */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' }, mr: 2}}>
