@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Divider } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import Carousel from "components/carousel";
 import ProductCard from "components/product_card";
 import React from "react";
